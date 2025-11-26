@@ -7,5 +7,12 @@ export default defineConfig({
     host: '0.0.0.0',
     allowedHosts: ['all'], // Libera geral
   },
+  server: {
+    host: '0.0.0.0', // Necessário para funcionar no Docker
+    allowedHosts: [
+      'all', // Permite qualquer host (Ideal para seu SaaS dinâmico)
+      // OU algo específico como '.mimesis.run'
+    ],
+  },
   plugins: [react()],
 })
